@@ -50,9 +50,9 @@
             "name": "The Klub Kitchen",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 60,
-            "taken_seats": 58,
-            "available_seats": 2
+            "total_seats": 45,
+            "taken_seats": 18,
+            "available_seats": 27
         },
         {
             "fsq_id": "579a410b498e5f7c187c5d91",
@@ -98,9 +98,9 @@
             "name": "Shiori",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 29,
-            "taken_seats": 28,
-            "available_seats": 1
+            "total_seats": 21,
+            "taken_seats": 3,
+            "available_seats": 18
         },
         {
             "fsq_id": "57aa1d97498ef24dbac46652",
@@ -166,9 +166,9 @@
             "name": "Banh Mi Stable",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 120,
-            "taken_seats": 1,
-            "available_seats": 119
+            "total_seats": 108,
+            "taken_seats": 72,
+            "available_seats": 36
         },
         {
             "fsq_id": "4b0d8651f964a520304a23e3",
@@ -205,9 +205,9 @@
             "name": "Lebensmittel in Mitte",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 88,
-            "taken_seats": 6,
-            "available_seats": 82
+            "total_seats": 138,
+            "taken_seats": 60,
+            "available_seats": 78
         },
         {
             "fsq_id": "4c0fde34ce57c928f7f580d2",
@@ -265,9 +265,9 @@
             "name": "Green Tea Caf\u00e9 Mamecha",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 51,
-            "taken_seats": 51,
-            "available_seats": 0
+            "total_seats": 80,
+            "taken_seats": 9,
+            "available_seats": 71
         },
         {
             "fsq_id": "4adcda88f964a520824921e3",
@@ -308,9 +308,9 @@
             "name": "Monsieur Vuong",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 150,
-            "taken_seats": 111,
-            "available_seats": 39
+            "total_seats": 74,
+            "taken_seats": 8,
+            "available_seats": 66
         },
         {
             "fsq_id": "4adf5ea4f964a520f57921e3",
@@ -355,9 +355,9 @@
             "name": "YamYam Berlin",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 46,
-            "taken_seats": 13,
-            "available_seats": 33
+            "total_seats": 197,
+            "taken_seats": 10,
+            "available_seats": 187
         },
         {
             "fsq_id": "4b50e193f964a520b93627e3",
@@ -412,9 +412,9 @@
             "name": "Dal Contadino",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 40,
-            "taken_seats": 4,
-            "available_seats": 36
+            "total_seats": 143,
+            "taken_seats": 84,
+            "available_seats": 59
         },
         {
             "fsq_id": "5447e8f6498e4a38ccf160aa",
@@ -480,9 +480,9 @@
             "name": "Kiez Falafel",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 108,
-            "taken_seats": 16,
-            "available_seats": 92
+            "total_seats": 57,
+            "taken_seats": 12,
+            "available_seats": 45
         },
         {
             "fsq_id": "52e8faff498ed1ed0107b3bf",
@@ -528,9 +528,9 @@
             "name": "Chipperfield Kantine",
             "related_places": {},
             "timezone": "Europe/Berlin",
-            "total_seats": 121,
-            "taken_seats": 66,
-            "available_seats": 55
+            "total_seats": 94,
+            "taken_seats": 46,
+            "available_seats": 48
         }
     ],
     "context": {
