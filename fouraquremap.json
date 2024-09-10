@@ -1,517 +1,547 @@
 {
     "results": [
-      {
-        "fsq_id": "551706fe498e237bfc874019",
-        "categories": [
-          {
-            "id": 13027,
-            "name": "Bistro",
-            "short_name": "Bistro",
-            "plural_name": "Bistros",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13032,
-            "name": "Cafe, Coffee, and Tea House",
-            "short_name": "Cafe, Coffee, and Tea House",
-            "plural_name": "Cafes, Coffee, and Tea Houses",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "LikelyOpen",
-        "distance": 117,
-        "geocodes": {
-          "main": {
-            "latitude": 52.527787,
-            "longitude": 13.404553
-          },
-          "roof": {
-            "latitude": 52.527787,
-            "longitude": 13.404553
-          }
+        {
+            "fsq_id": "551706fe498e237bfc874019",
+            "categories": [
+                {
+                    "id": 13027,
+                    "name": "Bistro",
+                    "short_name": "Bistro",
+                    "plural_name": "Bistros",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13032,
+                    "name": "Cafe, Coffee, and Tea House",
+                    "short_name": "Cafe, Coffee, and Tea House",
+                    "plural_name": "Cafes, Coffee, and Tea Houses",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "LikelyOpen",
+            "distance": 117,
+            "geocodes": {
+                "main": {
+                    "latitude": 52.527787,
+                    "longitude": 13.404553
+                },
+                "roof": {
+                    "latitude": 52.527787,
+                    "longitude": 13.404553
+                }
+            },
+            "link": "/v3/places/551706fe498e237bfc874019",
+            "location": {
+                "address": "Mulackstr. 15",
+                "country": "DE",
+                "cross_street": "",
+                "formatted_address": "Mulackstr. 15, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "The Klub Kitchen",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 60,
+            "taken_seats": 58,
+            "available_seats": 2
         },
-        "link": "/v3/places/551706fe498e237bfc874019",
-        "location": {
-          "address": "Mulackstr. 15",
-          "country": "DE",
-          "cross_street": "",
-          "formatted_address": "Mulackstr. 15, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
+        {
+            "fsq_id": "579a410b498e5f7c187c5d91",
+            "categories": [
+                {
+                    "id": 13263,
+                    "name": "Japanese Restaurant",
+                    "short_name": "Japanese",
+                    "plural_name": "Japanese Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 197,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.525307,
+                    "longitude": 13.408238
+                },
+                "main": {
+                    "latitude": 52.525385,
+                    "longitude": 13.408053
+                },
+                "roof": {
+                    "latitude": 52.525385,
+                    "longitude": 13.408053
+                }
+            },
+            "link": "/v3/places/579a410b498e5f7c187c5d91",
+            "location": {
+                "address": "Max-Beer-Str. 13",
+                "country": "DE",
+                "cross_street": "",
+                "formatted_address": "Max-Beer-Str. 13, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Shiori",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 29,
+            "taken_seats": 28,
+            "available_seats": 1
         },
-        "name": "The Klub Kitchen",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "579a410b498e5f7c187c5d91",
-        "categories": [
-          {
-            "id": 13263,
-            "name": "Japanese Restaurant",
-            "short_name": "Japanese",
-            "plural_name": "Japanese Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 197,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.525307,
-            "longitude": 13.408238
-          },
-          "main": {
-            "latitude": 52.525385,
-            "longitude": 13.408053
-          },
-          "roof": {
-            "latitude": 52.525385,
-            "longitude": 13.408053
-          }
+        {
+            "fsq_id": "57aa1d97498ef24dbac46652",
+            "categories": [
+                {
+                    "id": 13145,
+                    "name": "Fast Food Restaurant",
+                    "short_name": "Fast Food",
+                    "plural_name": "Fast Food Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13334,
+                    "name": "Sandwich Spot",
+                    "short_name": "Sandwich Spot",
+                    "plural_name": "Sandwich Spots",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/deli_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13379,
+                    "name": "Vietnamese Restaurant",
+                    "short_name": "Vietnamese",
+                    "plural_name": "Vietnamese Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vietnamese_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 323,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.527047,
+                    "longitude": 13.40807
+                },
+                "main": {
+                    "latitude": 52.526906,
+                    "longitude": 13.408248
+                },
+                "roof": {
+                    "latitude": 52.526906,
+                    "longitude": 13.408248
+                }
+            },
+            "link": "/v3/places/57aa1d97498ef24dbac46652",
+            "location": {
+                "address": "Alte Sch\u00f6nhauser Str. 50",
+                "country": "DE",
+                "cross_street": "Schendelgasse",
+                "formatted_address": "Alte Sch\u00f6nhauser Str. 50 (Schendelgasse), 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Banh Mi Stable",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 120,
+            "taken_seats": 1,
+            "available_seats": 119
         },
-        "link": "/v3/places/579a410b498e5f7c187c5d91",
-        "location": {
-          "address": "Max-Beer-Str. 13",
-          "country": "DE",
-          "cross_street": "",
-          "formatted_address": "Max-Beer-Str. 13, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
+        {
+            "fsq_id": "4b0d8651f964a520304a23e3",
+            "categories": [
+                {
+                    "id": 17069,
+                    "name": "Grocery Store",
+                    "short_name": "Grocery Store",
+                    "plural_name": "Grocery Stores",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 204,
+            "geocodes": {
+                "main": {
+                    "latitude": 52.524144,
+                    "longitude": 13.407534
+                }
+            },
+            "link": "/v3/places/4b0d8651f964a520304a23e3",
+            "location": {
+                "address": "Rochstr. 2",
+                "country": "DE",
+                "formatted_address": "Rochstr. 2, 10178 Berlin",
+                "locality": "Berlin",
+                "postcode": "10178",
+                "region": "Berlin"
+            },
+            "name": "Lebensmittel in Mitte",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 88,
+            "taken_seats": 6,
+            "available_seats": 82
         },
-        "name": "Shiori",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "57aa1d97498ef24dbac46652",
-        "categories": [
-          {
-            "id": 13145,
-            "name": "Fast Food Restaurant",
-            "short_name": "Fast Food",
-            "plural_name": "Fast Food Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13334,
-            "name": "Sandwich Spot",
-            "short_name": "Sandwich Spot",
-            "plural_name": "Sandwich Spots",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/deli_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13379,
-            "name": "Vietnamese Restaurant",
-            "short_name": "Vietnamese",
-            "plural_name": "Vietnamese Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vietnamese_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 323,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.527047,
-            "longitude": 13.40807
-          },
-          "main": {
-            "latitude": 52.526906,
-            "longitude": 13.408248
-          },
-          "roof": {
-            "latitude": 52.526906,
-            "longitude": 13.408248
-          }
+        {
+            "fsq_id": "4c0fde34ce57c928f7f580d2",
+            "categories": [
+                {
+                    "id": 13034,
+                    "name": "Caf\u00e9",
+                    "short_name": "Caf\u00e9",
+                    "plural_name": "Caf\u00e9s",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13035,
+                    "name": "Coffee Shop",
+                    "short_name": "Coffee Shop",
+                    "plural_name": "Coffee Shops",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13263,
+                    "name": "Japanese Restaurant",
+                    "short_name": "Japanese",
+                    "plural_name": "Japanese Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 427,
+            "geocodes": {
+                "main": {
+                    "latitude": 52.527223,
+                    "longitude": 13.406289
+                }
+            },
+            "link": "/v3/places/4c0fde34ce57c928f7f580d2",
+            "location": {
+                "address": "Mulackstr. 33",
+                "country": "DE",
+                "cross_street": "R\u00fcckerstr.",
+                "formatted_address": "Mulackstr. 33 (R\u00fcckerstr.), 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Green Tea Caf\u00e9 Mamecha",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 51,
+            "taken_seats": 51,
+            "available_seats": 0
         },
-        "link": "/v3/places/57aa1d97498ef24dbac46652",
-        "location": {
-          "address": "Alte Schönhauser Str. 50",
-          "country": "DE",
-          "cross_street": "Schendelgasse",
-          "formatted_address": "Alte Schönhauser Str. 50 (Schendelgasse), 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
+        {
+            "fsq_id": "4adcda88f964a520824921e3",
+            "categories": [
+                {
+                    "id": 13379,
+                    "name": "Vietnamese Restaurant",
+                    "short_name": "Vietnamese",
+                    "plural_name": "Vietnamese Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vietnamese_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 312,
+            "geocodes": {
+                "main": {
+                    "latitude": 52.52664,
+                    "longitude": 13.408009
+                },
+                "roof": {
+                    "latitude": 52.52664,
+                    "longitude": 13.408009
+                }
+            },
+            "link": "/v3/places/4adcda88f964a520824921e3",
+            "location": {
+                "address": "Alte Sch\u00f6nhauser Str. 46",
+                "country": "DE",
+                "formatted_address": "Alte Sch\u00f6nhauser Str. 46, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Monsieur Vuong",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 150,
+            "taken_seats": 111,
+            "available_seats": 39
         },
-        "name": "Banh Mi Stable",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "4b0d8651f964a520304a23e3",
-        "categories": [
-          {
-            "id": 17069,
-            "name": "Grocery Store",
-            "short_name": "Grocery Store",
-            "plural_name": "Grocery Stores",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 204,
-        "geocodes": {
-          "main": {
-            "latitude": 52.524144,
-            "longitude": 13.407534
-          }
+        {
+            "fsq_id": "4adf5ea4f964a520f57921e3",
+            "categories": [
+                {
+                    "id": 13289,
+                    "name": "Korean Restaurant",
+                    "short_name": "Korean",
+                    "plural_name": "Korean Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/korean_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 381,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.527583,
+                    "longitude": 13.40827
+                },
+                "main": {
+                    "latitude": 52.527713,
+                    "longitude": 13.40829
+                },
+                "roof": {
+                    "latitude": 52.527713,
+                    "longitude": 13.40829
+                }
+            },
+            "link": "/v3/places/4adf5ea4f964a520f57921e3",
+            "location": {
+                "address": "Alte Sch\u00f6nhauser Str. 6",
+                "country": "DE",
+                "formatted_address": "Alte Sch\u00f6nhauser Str. 6, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "YamYam Berlin",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 46,
+            "taken_seats": 13,
+            "available_seats": 33
         },
-        "link": "/v3/places/4b0d8651f964a520304a23e3",
-        "location": {
-          "address": "Rochstr. 2",
-          "country": "DE",
-          "formatted_address": "Rochstr. 2, 10178 Berlin",
-          "locality": "Berlin",
-          "postcode": "10178",
-          "region": "Berlin"
+        {
+            "fsq_id": "4b50e193f964a520b93627e3",
+            "categories": [
+                {
+                    "id": 13003,
+                    "name": "Bar",
+                    "short_name": "Bar",
+                    "plural_name": "Bars",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13236,
+                    "name": "Italian Restaurant",
+                    "short_name": "Italian",
+                    "plural_name": "Italian Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 535,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.527741,
+                    "longitude": 13.404754
+                },
+                "main": {
+                    "latitude": 52.527659,
+                    "longitude": 13.404925
+                },
+                "roof": {
+                    "latitude": 52.527659,
+                    "longitude": 13.404925
+                }
+            },
+            "link": "/v3/places/4b50e193f964a520b93627e3",
+            "location": {
+                "address": "Gormannstr. 10",
+                "country": "DE",
+                "formatted_address": "Gormannstr. 10, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Dal Contadino",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 40,
+            "taken_seats": 4,
+            "available_seats": 36
         },
-        "name": "Lebensmittel in Mitte",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "4c0fde34ce57c928f7f580d2",
-        "categories": [
-          {
-            "id": 13034,
-            "name": "Café",
-            "short_name": "Café",
-            "plural_name": "Cafés",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13035,
-            "name": "Coffee Shop",
-            "short_name": "Coffee Shop",
-            "plural_name": "Coffee Shops",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13263,
-            "name": "Japanese Restaurant",
-            "short_name": "Japanese",
-            "plural_name": "Japanese Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 427,
-        "geocodes": {
-          "main": {
-            "latitude": 52.527223,
-            "longitude": 13.406289
-          }
+        {
+            "fsq_id": "5447e8f6498e4a38ccf160aa",
+            "categories": [
+                {
+                    "id": 13032,
+                    "name": "Cafe, Coffee, and Tea House",
+                    "short_name": "Cafe, Coffee, and Tea House",
+                    "plural_name": "Cafes, Coffee, and Tea Houses",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13144,
+                    "name": "Falafel Restaurant",
+                    "short_name": "Falafel",
+                    "plural_name": "Falafel Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/falafel_",
+                        "suffix": ".png"
+                    }
+                },
+                {
+                    "id": 13377,
+                    "name": "Vegan and Vegetarian Restaurant",
+                    "short_name": "Vegan and Vegetarian Restaurant",
+                    "plural_name": "Vegan and Vegetarian Restaurants",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vegetarian_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 404,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.528093,
+                    "longitude": 13.410287
+                },
+                "main": {
+                    "latitude": 52.527967,
+                    "longitude": 13.409981
+                },
+                "roof": {
+                    "latitude": 52.527967,
+                    "longitude": 13.409981
+                }
+            },
+            "link": "/v3/places/5447e8f6498e4a38ccf160aa",
+            "location": {
+                "address": "Rosa-Luxemburg-Str. 49",
+                "country": "DE",
+                "cross_street": "Linienstr.",
+                "formatted_address": "Rosa-Luxemburg-Str. 49 (Linienstr.), 10178 Berlin",
+                "locality": "Berlin",
+                "postcode": "10178",
+                "region": "Berlin"
+            },
+            "name": "Kiez Falafel",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 108,
+            "taken_seats": 16,
+            "available_seats": 92
         },
-        "link": "/v3/places/4c0fde34ce57c928f7f580d2",
-        "location": {
-          "address": "Mulackstr. 33",
-          "country": "DE",
-          "cross_street": "Rückerstr.",
-          "formatted_address": "Mulackstr. 33 (Rückerstr.), 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
-        },
-        "name": "Green Tea Café Mamecha",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "4adcda88f964a520824921e3",
-        "categories": [
-          {
-            "id": 13379,
-            "name": "Vietnamese Restaurant",
-            "short_name": "Vietnamese",
-            "plural_name": "Vietnamese Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vietnamese_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 312,
-        "geocodes": {
-          "main": {
-            "latitude": 52.52664,
-            "longitude": 13.408009
-          },
-          "roof": {
-            "latitude": 52.52664,
-            "longitude": 13.408009
-          }
-        },
-        "link": "/v3/places/4adcda88f964a520824921e3",
-        "location": {
-          "address": "Alte Schönhauser Str. 46",
-          "country": "DE",
-          "formatted_address": "Alte Schönhauser Str. 46, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
-        },
-        "name": "Monsieur Vuong",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "4adf5ea4f964a520f57921e3",
-        "categories": [
-          {
-            "id": 13289,
-            "name": "Korean Restaurant",
-            "short_name": "Korean",
-            "plural_name": "Korean Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/korean_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 381,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.527583,
-            "longitude": 13.40827
-          },
-          "main": {
-            "latitude": 52.527713,
-            "longitude": 13.40829
-          },
-          "roof": {
-            "latitude": 52.527713,
-            "longitude": 13.40829
-          }
-        },
-        "link": "/v3/places/4adf5ea4f964a520f57921e3",
-        "location": {
-          "address": "Alte Schönhauser Str. 6",
-          "country": "DE",
-          "formatted_address": "Alte Schönhauser Str. 6, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
-        },
-        "name": "YamYam Berlin",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "4b50e193f964a520b93627e3",
-        "categories": [
-          {
-            "id": 13003,
-            "name": "Bar",
-            "short_name": "Bar",
-            "plural_name": "Bars",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13236,
-            "name": "Italian Restaurant",
-            "short_name": "Italian",
-            "plural_name": "Italian Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 535,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.527741,
-            "longitude": 13.404754
-          },
-          "main": {
-            "latitude": 52.527659,
-            "longitude": 13.404925
-          },
-          "roof": {
-            "latitude": 52.527659,
-            "longitude": 13.404925
-          }
-        },
-        "link": "/v3/places/4b50e193f964a520b93627e3",
-        "location": {
-          "address": "Gormannstr. 10",
-          "country": "DE",
-          "formatted_address": "Gormannstr. 10, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
-        },
-        "name": "Dal Contadino",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "5447e8f6498e4a38ccf160aa",
-        "categories": [
-          {
-            "id": 13032,
-            "name": "Cafe, Coffee, and Tea House",
-            "short_name": "Cafe, Coffee, and Tea House",
-            "plural_name": "Cafes, Coffee, and Tea Houses",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13144,
-            "name": "Falafel Restaurant",
-            "short_name": "Falafel",
-            "plural_name": "Falafel Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/falafel_",
-              "suffix": ".png"
-            }
-          },
-          {
-            "id": 13377,
-            "name": "Vegan and Vegetarian Restaurant",
-            "short_name": "Vegan and Vegetarian Restaurant",
-            "plural_name": "Vegan and Vegetarian Restaurants",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/vegetarian_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 404,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.528093,
-            "longitude": 13.410287
-          },
-          "main": {
-            "latitude": 52.527967,
-            "longitude": 13.409981
-          },
-          "roof": {
-            "latitude": 52.527967,
-            "longitude": 13.409981
-          }
-        },
-        "link": "/v3/places/5447e8f6498e4a38ccf160aa",
-        "location": {
-          "address": "Rosa-Luxemburg-Str. 49",
-          "country": "DE",
-          "cross_street": "Linienstr.",
-          "formatted_address": "Rosa-Luxemburg-Str. 49 (Linienstr.), 10178 Berlin",
-          "locality": "Berlin",
-          "postcode": "10178",
-          "region": "Berlin"
-        },
-        "name": "Kiez Falafel",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      },
-      {
-        "fsq_id": "52e8faff498ed1ed0107b3bf",
-        "categories": [
-          {
-            "id": 13027,
-            "name": "Bistro",
-            "short_name": "Bistro",
-            "plural_name": "Bistros",
-            "icon": {
-              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
-              "suffix": ".png"
-            }
-          }
-        ],
-        "chains": [],
-        "closed_bucket": "VeryLikelyOpen",
-        "distance": 782,
-        "geocodes": {
-          "drop_off": {
-            "latitude": 52.528199,
-            "longitude": 13.400368
-          },
-          "main": {
-            "latitude": 52.528296,
-            "longitude": 13.400523
-          },
-          "roof": {
-            "latitude": 52.528296,
-            "longitude": 13.400523
-          }
-        },
-        "link": "/v3/places/52e8faff498ed1ed0107b3bf",
-        "location": {
-          "address": "Joachimstr. 11",
-          "country": "DE",
-          "cross_street": "",
-          "formatted_address": "Joachimstr. 11, 10119 Berlin",
-          "locality": "Berlin",
-          "postcode": "10119",
-          "region": "Berlin"
-        },
-        "name": "Chipperfield Kantine",
-        "related_places": {},
-        "timezone": "Europe/Berlin"
-      }
+        {
+            "fsq_id": "52e8faff498ed1ed0107b3bf",
+            "categories": [
+                {
+                    "id": 13027,
+                    "name": "Bistro",
+                    "short_name": "Bistro",
+                    "plural_name": "Bistros",
+                    "icon": {
+                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+                        "suffix": ".png"
+                    }
+                }
+            ],
+            "chains": [],
+            "closed_bucket": "VeryLikelyOpen",
+            "distance": 782,
+            "geocodes": {
+                "drop_off": {
+                    "latitude": 52.528199,
+                    "longitude": 13.400368
+                },
+                "main": {
+                    "latitude": 52.528296,
+                    "longitude": 13.400523
+                },
+                "roof": {
+                    "latitude": 52.528296,
+                    "longitude": 13.400523
+                }
+            },
+            "link": "/v3/places/52e8faff498ed1ed0107b3bf",
+            "location": {
+                "address": "Joachimstr. 11",
+                "country": "DE",
+                "cross_street": "",
+                "formatted_address": "Joachimstr. 11, 10119 Berlin",
+                "locality": "Berlin",
+                "postcode": "10119",
+                "region": "Berlin"
+            },
+            "name": "Chipperfield Kantine",
+            "related_places": {},
+            "timezone": "Europe/Berlin",
+            "total_seats": 121,
+            "taken_seats": 66,
+            "available_seats": 55
+        }
     ],
     "context": {
-      "geo_bounds": {
-        "circle": {
-          "center": {
-            "latitude": 52.52437,
-            "longitude": 13.41053
-          },
-          "radius": 19832
+        "geo_bounds": {
+            "circle": {
+                "center": {
+                    "latitude": 52.52437,
+                    "longitude": 13.41053
+                },
+                "radius": 19832
+            }
         }
-      }
     }
-  }
+}
