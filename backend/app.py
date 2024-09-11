@@ -3,6 +3,7 @@ from flask_cors import CORS
 import json
 import requests
 from querys import fetch_restaurant_data
+from sms_service import send_booking_verification, send_registry_verification
 
 app = Flask(__name__)
 CORS(app)
@@ -15,14 +16,6 @@ def get_messages(teamName):
         url = f"http://hackathons.masterschool.com:3030/team/getMessages/{team_name_encoded}"
         response = requests.get(url)
         
-        
-        print(f"Response status: {response.status_code}")
-        print(f"Response content: {response.content}")
-
-
-        print(f"Response status: {response.status_code}")
-        print(f"Response content: {response.content}")
-
         if response.status_code == 200:
             print(f"Received data: {response.json()}")
             return jsonify(response.json())
@@ -135,90 +128,56 @@ def validate_restaurant_data(phone_number, accept, fsq_id):
             return f"No seats available or booking not confirmed for phone number: {phone_number}"
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
-        return jsonify({"error": str(e)}), 500
+        return {"error": str(e)}, 500
 
 
 def get_latitude_longitude(fsq_id):
     try:
         restaurant_data = fetch_restaurant_data(fsq_id)
+        if not restaurant_data or "geocodes" not in restaurant_data:
+            print(f"Failed to retrieve geocodes for fsq_id: {fsq_id}")
+            return {"error": "No geocodes found for the restaurant"}, 400
+
         geo_data = restaurant_data["geocodes"]["main"]
-        post_geodata(geo_data, fsq_id)
+        latitude = geo_data.get("latitude")
+        longitude = geo_data.get("longitude")
+
+        if latitude and longitude:
+            response = requests.post("http://127.0.0.1:5002/post_geodata", json={
+                "latitude": latitude,
+                "longitude": longitude,
+                "fsq_id": fsq_id
+            })
+            print(f"GeoData post response: {response.json()}")
+            return response.json(), response.status_code
+        else:
+            print(f"Incomplete geo data for fsq_id: {fsq_id}")
+            return {"error": "Incomplete geo data"}, 400
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
         return {"error": str(e)}, 500
-
-
-def post_geodata(geo_data, fsq_id):
-    url = "http://localhost:5002/post_geodata"
-    payload = {
-        "latitude": geo_data["latitude"],
-        "longitude": geo_data["longitude"],
-        "fsq_id": fsq_id,
-    }
-    try:
-        response = requests.post(url, json=payload)
-        response.raise_for_status()
-        print(f"Data posted successfully: {response.json()}")
-    except requests.exceptions.RequestException as e:
-        print(f"Request failed: {e}")
-
-
-def send_booking_verification(phoneNumber, restaurant_name, available_seats):
-    try:
-        url = "http://hackathons.masterschool.com:3030/sms/send"
-        headers = {"Content-Type": "application/json"}
-
-        data = {
-            "phoneNumber": phoneNumber,
-            "message": f"Do you want to book a table in {restaurant_name}? There are currently {available_seats} seats available! Answer: Yes or No",
-            "sender": "",
-        }
-
-        response = requests.post(url, json=data, headers=headers)
-
-        if response.status_code == 200:
-            print(f"SMS sent successfully! Status Code: {response.status_code}")
-            return response.json()
-        else:
-            print(f"Failed to send SMS. Status Code: {response.status_code}")
-            return {
-                "error": "Failed to send SMS",
-                "status_code": response.status_code,
-                "response": response.text,
-            }
-
-    except Exception as e:
-        print(f"Error sending SMS: {str(e)}")
-        return {"error": str(e)}, 500
     
-
-def send_registry_verification(phone_number):
+    
+@app.route("/post_geodata", methods=["POST"])
+def post_geodata():
     try:
-        url = "http://hackathons.masterschool.com:3030/sms/send"
-        headers = {"Content-Type": "application/json"}
+        geo_data = request.json  
 
-        data = {
-            "phoneNumber": phone_number,
-            "message": f"Phone number +{phone_number} was registerd successfully!",
-            "sender": "",
-        }
+        if not geo_data:
+            return jsonify({"error": "No data provided"}), 400
 
-        response = requests.post(url, json=data, headers=headers)
+        latitude = geo_data.get("latitude")
+        longitude = geo_data.get("longitude")
+        fsq_id = geo_data.get("fsq_id")
 
-        if response.status_code == 200:
-            print(f"SMS sent successfully! Status Code: {response.status_code}")
-            return response.json()
-        else:
-            print(f"Failed to send SMS. Status Code: {response.status_code}")
-            return {
-                "error": "Failed to send SMS",
-                "status_code": response.status_code,
-                "response": response.text,
-            }
+        if not latitude or not longitude or not fsq_id:
+            return jsonify({"error": "Incomplete geo data"}), 400
 
+        print(f"Received GeoData: Latitude: {latitude}, Longitude: {longitude}, FSQ ID: {fsq_id}")
+        return jsonify({"status": "success", "data": geo_data}), 200
     except Exception as e:
-        print(f"Error sending SMS: {str(e)}")
-        return {"error": str(e)}, 500
+        print(f"Error processing geodata: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
