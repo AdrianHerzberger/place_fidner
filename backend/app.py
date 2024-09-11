@@ -43,8 +43,6 @@ def register_number(phoneNumber, cityName):
             "city_name": cityName,
         }
 
-        print(register_user)
-
         response_status_code = 200
 
         if response_status_code == 200:
@@ -54,6 +52,7 @@ def register_number(phoneNumber, cityName):
                 "data": register_user,
             }
             phone_number = register_user["phone_number"]
+            city_name = register_user["city_name"]
             register_phone(phone_number)
             send_registry_verification(phone_number)
             return jsonify(response), 200
@@ -68,16 +67,18 @@ def register_number(phoneNumber, cityName):
     "/book/phone_number/<phoneNumber>/<accept>/fsq_id/<fsq_id>", methods=["GET", "POST"]
 )
 def book(phoneNumber, accept, fsq_id):
-    print(f"The type of phone number : {type(phoneNumber)}")
     try:
         if accept.lower() not in ["true", "false"]:
             return "'accept' parameter must be either 'true' or 'false'.", 400
 
+
         if accept.lower() == "true":
             validate_restaurant_data(phoneNumber, accept, fsq_id)
             return f"Booking confirmed for phone number: {phoneNumber}"
-        else:
-            return f"Booking canceled for phone number: {phoneNumber}"
+        return jsonify({
+                "message": "No seats available or booking not confirmed.",
+                "prompt_new_selection": True
+            }), 400
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
@@ -90,7 +91,6 @@ def register_phone(phone_number):
         data = {"phoneNumber": phone_number, "teamName": "TeamPlaceFinder"}
         response = requests.post(url, json=data, headers=headers)
 
-        print(f"Show phone number : {response}")
         if response.status_code == 200:
             print(
                 f"Phone number registerd successfully! Status code : {response.status_code}"
@@ -115,7 +115,7 @@ def validate_restaurant_data(phone_number, accept, fsq_id):
     try:
         restaurant_data = fetch_restaurant_data(fsq_id)
         if "available_seats" not in restaurant_data:
-            return "No available seats data found.", 400
+            return jsonify({"error": "No available seats data found.", "prompt_new_selection": True}), 400
         restaurant_name = restaurant_data.get("name")
         available_seats = restaurant_data.get("available_seats", 0)
         if available_seats > 0 and accept.lower() == "true":
@@ -125,7 +125,7 @@ def validate_restaurant_data(phone_number, accept, fsq_id):
                 f"Seats available. Booking confirmed for phone number: {phone_number}"
             )
         else:
-            return f"No seats available or booking not confirmed for phone number: {phone_number}"
+            return {"message": f"No seats available or booking not confirmed for phone number: {phone_number}", "prompt_new_selection": True}, 400
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
         return {"error": str(e)}, 500
