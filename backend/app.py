@@ -2,7 +2,7 @@ from flask import Flask, render_template, flash, request, redirect, url_for, jso
 from flask_cors import CORS
 import json
 import requests
-from querys import fetch_restaurant_data
+from querys import fetch_restaurant_fsq, fetch_restaurants_by_city
 from sms_service import send_booking_verification, send_registry_verification
 
 app = Flask(__name__)
@@ -46,13 +46,23 @@ def register_number(phoneNumber, cityName):
         response_status_code = 200
 
         if response_status_code == 200:
+            restaurants = fetch_restaurants_by_city(cityName)
+        
+            restaurant_list = [
+                {"fsq_id": restaurant["fsq_id"], "name": restaurant["name"]}
+                for restaurant in restaurants
+            ]
+            
             response = {
                 "status": "success",
                 "message": "User registered successfully",
-                "data": register_user,
+                "data": {
+                    "user": register_user,
+                    "restaurants": restaurant_list  
+                }
             }
+            
             phone_number = register_user["phone_number"]
-            city_name = register_user["city_name"]
             register_phone(phone_number)
             send_registry_verification(phone_number)
             return jsonify(response), 200
@@ -70,7 +80,6 @@ def book(phoneNumber, accept, fsq_id):
     try:
         if accept.lower() not in ["true", "false"]:
             return "'accept' parameter must be either 'true' or 'false'.", 400
-
 
         if accept.lower() == "true":
             validate_restaurant_data(phoneNumber, accept, fsq_id)
@@ -113,27 +122,36 @@ def register_phone(phone_number):
 
 def validate_restaurant_data(phone_number, accept, fsq_id):
     try:
-        restaurant_data = fetch_restaurant_data(fsq_id)
+        restaurant_data = fetch_restaurant_fsq(fsq_id)
+        
         if "available_seats" not in restaurant_data:
-            return jsonify({"error": "No available seats data found.", "prompt_new_selection": True}), 400
+            return ({
+                "message": "No seats available or booking not confirmed.",
+                "prompt_new_selection": True
+            }), 400
+            
         restaurant_name = restaurant_data.get("name")
         available_seats = restaurant_data.get("available_seats", 0)
+        
         if available_seats > 0 and accept.lower() == "true":
             get_latitude_longitude(fsq_id)
             send_booking_verification(phone_number, restaurant_name, available_seats)
-            return (
-                f"Seats available. Booking confirmed for phone number: {phone_number}"
-            )
+            return ({
+                "message": f"Seats available. Booking confirmed for phone number: {phone_number}"
+            }), 200
         else:
-            return {"message": f"No seats available or booking not confirmed for phone number: {phone_number}", "prompt_new_selection": True}, 400
+            return ({
+                "message": "No seats available or booking not confirmed.",
+                "prompt_new_selection": True
+            }), 400
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
-        return {"error": str(e)}, 500
+        return ({"error": str(e)}), 500
 
 
 def get_latitude_longitude(fsq_id):
     try:
-        restaurant_data = fetch_restaurant_data(fsq_id)
+        restaurant_data = fetch_restaurant_fsq(fsq_id)
         if not restaurant_data or "geocodes" not in restaurant_data:
             print(f"Failed to retrieve geocodes for fsq_id: {fsq_id}")
             return {"error": "No geocodes found for the restaurant"}, 400
