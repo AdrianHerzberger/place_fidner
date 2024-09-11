@@ -12,10 +12,17 @@ CORS(app)
 def get_messages(teamName):
     try:
         team_name_encoded = teamName.replace(" ", "%20")
+        print(f"Whats is the team name string : {team_name_encoded}")
         url = f"http://hackathons.masterschool.com:3030/team/getMessages/{team_name_encoded}"
+        print(f"Constructed URL: {url}")
+        
         response = requests.get(url)
+        
+        print(f"Response status: {response.status_code}")
+        print(f"Response content: {response.content}")
 
         if response.status_code == 200:
+            print(f"Received data: {response.json()}")
             return jsonify(response.json())
         else:
             return (
@@ -62,30 +69,31 @@ def register_number(phoneNumber, cityName):
         return jsonify({"error": str(e)}), 500
 
 
-@app.route("/book/phone_number/<phoneNumber>/<accept>", methods=["GET", "POST"])
-def book(phoneNumber, accept):
+@app.route("/book/phone_number/<phoneNumber>/<accept>/fsq_id/<fsq_id>", methods=["GET", "POST"])
+def book(phoneNumber, accept, fsq_id):
     try:
         if accept.lower() not in ["true", "false"]:
             return "'accept' parameter must be either 'true' or 'false'.", 400
 
         if accept.lower() == "true":
-            validate_available_seats(phoneNumber, accept)
+            validate_available_seats(phoneNumber, accept, fsq_id)
+            print(f"Passes values to {validate_available_seats} function")
             return f"Booking confirmed for phone number: {phoneNumber}"
         else:
             return f"Booking canceled for phone number: {phoneNumber}"
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
         return jsonify({"error": str(e)}), 500
-
-
+    
+    
 def register_phone(phone_number):
-    print(f"Show phone number : {phone_number}")
     try:
-        url = "http://hackathons.masterschool.com:3030//team/registerNumber"
+        url = "http://hackathons.masterschool.com:3030/team/registerNumber"
         headers = {"Content-Type": "application/json"}
-        data = {"phone_number": phone_number, "teamName": "TeamOne"}
+        data = {"phoneNumber": phone_number, "teamName": "TeamPlaceFinder"}
         response = requests.post(url, json=data, headers=headers)
 
+        print(f"Show phone number : {response}")
         if response.status_code == 200:
             print(
                 f"Phone number registerd successfully! Status code : {response.status_code}"
@@ -105,16 +113,23 @@ def register_phone(phone_number):
         return {"error": str(e)}, 500
 
 
-def validate_available_seats(phone_number, accept):
-    print(f"Parameters passed from book query : {phone_number}, {accept}")
-    restaurant_data = fetch_restaurant_data()
-    for av_seats in restaurant_data["results"]:
-        if av_seats["available_seats"] > 0 and accept == "true":
-            print(f"Available seats: {av_seats['available_seats']}")
+def validate_available_seats(phone_number, accept, fsq_id):
+    try:
+        restaurant_data = fetch_restaurant_data(fsq_id)
+        print(f"Response from API: {restaurant_data}")
+        
+        if 'available_seats' not in restaurant_data:
+            return "No available seats data found.", 400
+        
+        available_seats = restaurant_data.get('available_seats', 0)
+        if available_seats > 0 and accept.lower() == "true":
             send_sms(phone_number)
+            return f"Seats available. Booking confirmed for phone number: {phone_number}"
         else:
-            print("There are no seats available")
-    return None
+            return f"No seats available or booking not confirmed for phone number: {phone_number}"
+    except Exception as e:
+        print(f"Exception occurred: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 
 def send_sms(phoneNumber):
@@ -124,8 +139,8 @@ def send_sms(phoneNumber):
 
         data = {
             "phoneNumber": phoneNumber,
-            "message": "Do you want to book a table? Yes or No",
-            "sender": "Place Finder",
+            "message": "Do you want to book a table? Answer: Yes or No",
+            "sender": "",
         }
 
         response = requests.post(url, json=data, headers=headers)
