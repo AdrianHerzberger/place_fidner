@@ -17,7 +17,7 @@ def fetch_restaurant_data(fsq_id):
 
     response = requests.get(url, headers=headers)
     data = response.json()
-    print(f"Restaurant data for {fsq_id}: {data}")
+    #print(f"Restaurant data for {fsq_id}: {data}")
     return insert_available_seats(data)
 
 
