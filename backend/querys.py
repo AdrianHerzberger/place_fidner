@@ -7,7 +7,7 @@ load_dotenv()
 foursquare_key = os.getenv("foursquare_key")
 
 
-def fetch_restaurant_fsq(fsq_id):
+def fetch_restaurant_by_fsq(fsq_id):
     url = f"https://api.foursquare.com/v3/places/{fsq_id}"
     headers = {
         "accept": "application/json",

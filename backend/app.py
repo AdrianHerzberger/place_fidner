@@ -2,7 +2,7 @@ from flask import Flask, render_template, flash, request, redirect, url_for, jso
 from flask_cors import CORS
 import json
 import requests
-from querys import fetch_restaurant_fsq, fetch_restaurants_by_city
+from querys import fetch_restaurant_by_fsq, fetch_restaurants_by_city
 from sms_service import send_booking_verification, send_registry_verification
 
 app = Flask(__name__)
@@ -122,7 +122,7 @@ def register_phone(phone_number):
 
 def validate_restaurant_data(phone_number, accept, fsq_id):
     try:
-        restaurant_data = fetch_restaurant_fsq(fsq_id)
+        restaurant_data = fetch_restaurant_by_fsq(fsq_id)
         
         if "available_seats" not in restaurant_data:
             return ({
@@ -151,7 +151,7 @@ def validate_restaurant_data(phone_number, accept, fsq_id):
 
 def get_latitude_longitude(fsq_id):
     try:
-        restaurant_data = fetch_restaurant_fsq(fsq_id)
+        restaurant_data = fetch_restaurant_by_fsq(fsq_id)
         if not restaurant_data or "geocodes" not in restaurant_data:
             print(f"Failed to retrieve geocodes for fsq_id: {fsq_id}")
             return {"error": "No geocodes found for the restaurant"}, 400
